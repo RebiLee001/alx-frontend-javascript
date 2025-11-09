@@ -1,22 +1,22 @@
 // task_1/js/main.ts
 
-// Teacher interface from Task 1
+// Teacher interface
 interface Teacher {
-  readonly firstName: string;      // read-only after initialization
-  readonly lastName: string;       // read-only after initialization
-  fullTimeEmployee: boolean;       // mandatory
-  yearsOfExperience?: number;      // optional
-  location: string;                // mandatory
-  [key: string]: any;              // allows additional attributes
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
 }
 
-// Directors interface extending Teacher
-interface Directors extends Teacher {
-  numberOfReports: number;         // mandatory property for Directors
+// Director interface (singular, not Directors)
+interface Director extends Teacher {
+  numberOfReports: number;
 }
 
 // Example usage
-const director1: Directors = {
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
